@@ -1,0 +1,87 @@
+:root {
+  --main-bg-color: #151515;
+  --secondary-bg-color: #343434;
+  --main-font-family: DIN, Helvetica, Arial, sans-serif;
+}
+
+.app {
+  padding: 5px;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+.footer {
+  display: grid;
+  grid-row-gap: 1em;
+  margin: 1rem;
+}
+
+hr {
+  background-color: var(--secondary-bg-color);
+}
+
+
+.links-layout {
+  justify-self: left;
+  position: relative;
+  margin: 1rem;
+}
+
+.link {
+  margin: .5rem;
+}
+
+.search-layout {
+  justify-self: right;
+  position: relative;
+  margin: 1rem;
+}
+
+.content-layout {
+  display: grid;
+  grid-row-gap: 1em;
+  margin: 1rem;
+}
+
+.select-item {
+  padding: 1rem;
+  background-color: var(--secondary-bg-color);
+  cursor: pointer;
+}
+
+.item-list-layout {
+  border: solid 1px var(--secondary-bg-color);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem;
+}
+
+.item-image-layout {
+  display: grid;
+  place-items: center;
+  grid-row-gap: 1em;
+}
+
+.item-image {
+  width: 30%;
+  border-radius: 10px;
+}
+
+.favorite-button {
+  background: rgb(50, 43, 122);
+  color: white;
+  padding: 1rem;
+  border: 1px solid  var(--secondary-bg-color);
+  border-radius: 10px;
+  cursor: pointer;
+  width:12rem;
+}
+
+.favorite-button:active{
+  background-color: rgb(37, 33, 81);
+  transform: translateY(4px);
+}
