@@ -27,13 +27,13 @@ export default function App() {
     <div className="app" style = {{
       backgroundColor: darkMode ? '#151515' : 'white',
     }}>
-      <DefaultContext.Provider value={{ handleCreateFan, handleDarkMode}}>
-        <Header fan={fan} darkMode = {darkMode}/>
+      <DefaultContext.Provider value={{ handleCreateFan, handleDarkMode, darkMode, fan}}>
+        <Header/>
         <DarkMode/>
         <hr />
-        <Content darkMode = {darkMode}/>
+        <Content/>
         <hr />
-        <Footer darkMode = {darkMode}/>
+        <Footer/>
       </DefaultContext.Provider>
     </div>
   );

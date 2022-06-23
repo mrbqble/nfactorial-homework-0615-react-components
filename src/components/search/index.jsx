@@ -1,9 +1,10 @@
-import * as React from 'react';
+import React, { useContext } from 'react';
 import { styled } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
+import { DefaultContext } from "../../Context";
 
-const Search = styled('div')(({ darkMode }) => ({
+const Search = styled('div')(({darkMode}) => ({
   position: 'relative',
   backgroundColor: 'white',
   marginLeft: 0,
@@ -30,7 +31,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export const SearchField = ({darkMode}) => {
+export const SearchField = () => {
+  const { darkMode } = useContext(DefaultContext);
+
     return (
         <Search darkMode = {darkMode}>
             <SearchIconWrapper>

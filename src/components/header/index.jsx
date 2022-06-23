@@ -5,6 +5,8 @@ import { ReactComponent as InstagramLogoSVG } from "../../assets/instagram.svg";
 import { ReactComponent as TwitterLogoSVG } from "../../assets/twitter.svg";
 import { ReactComponent as YoutubeLogoSVG } from "../../assets/youtube.svg";
 import { SearchField } from "../search";
+import { DefaultContext } from "../../Context";
+import { useContext } from "react";
 
 //массив данных ссылок
 const swLinks = [
@@ -30,7 +32,9 @@ const swLinks = [
   },
 ];
 
-export const Header = ({ fan, darkMode }) => {
+export const Header = () => {
+  const { darkMode, fan } = useContext(DefaultContext);
+
   return (
     <header>
       <div className="links-layout">

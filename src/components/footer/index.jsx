@@ -1,6 +1,10 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { DefaultContext } from "../../Context";
 
-export const Footer = ({darkMode}) => {
+export const Footer = () => {
+
+    const { darkMode } = useContext(DefaultContext);
+
     return (
         <div className='footer'>
             <p style = {{
